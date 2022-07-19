@@ -233,7 +233,7 @@ a {
 }
 @media (min-width: 1366px) {
   .v-half {
-    width: 50vw;
+    width: 50%;
     height: 100vh;
   }
 }

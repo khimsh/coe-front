@@ -26,20 +26,20 @@
                 <nav class="site-nav">
                     <h2 class="sr-only">Navigation</h2>
                     <ul class="site-nav__list">
-                        <li class="site-nav__li"><a href="#" class="site-nav__link">VEP-1 Project </a></li>
-                        <li class="site-nav__li"><a href="#" class="site-nav__link">Mission</a></li>
-                        <li class="site-nav__li"><a href="#" class="site-nav__link">Green Campus</a></li>
-                        <li class="site-nav__li"><a href="#" class="site-nav__link">Programs & Services</a></li>
-                        <li class="site-nav__li"><a href="#" class="site-nav__link">Industry Engagement</a></li>
-                        <li class="site-nav__li"><a href="#" class="site-nav__link">Partners</a></li>
-                        <li class="site-nav__li"><a href="#" class="site-nav__link"> Internationalization</a></li>
-                        <li class="site-nav__li"><a href="#" class="site-nav__link">News</a></li>
-                        <li class="site-nav__li"><a href="#" class="site-nav__link">Team</a></li>
-                        <li class="site-nav__li"><a href="#" class="site-nav__link">Contact</a></li>
+                        <li class="site-nav__li"><a href="#project" class="site-nav__link active">VEP-1 Project </a></li>
+                        <li class="site-nav__li"><a href="#mission" class="site-nav__link">Mission</a></li>
+                        <li class="site-nav__li"><a href="#campus" class="site-nav__link">Green Campus</a></li>
+                        <li class="site-nav__li"><a href="#program" class="site-nav__link">Programs & Services</a></li>
+                        <li class="site-nav__li"><a href="#engagement" class="site-nav__link">Industry Engagement</a></li>
+                        <li class="site-nav__li"><a href="#partners" class="site-nav__link">Partners</a></li>
+                        <li class="site-nav__li"><a href="#internationalization" class="site-nav__link">Internationalization</a></li>
+                        <li class="site-nav__li"><a href="#news" class="site-nav__link">News</a></li>
+                        <li class="site-nav__li"><a href="#team" class="site-nav__link">Team</a></li>
+                        <li class="site-nav__li"><a href="#contact" class="site-nav__link">Contact</a></li>
                     </ul>
                 </nav>
 
-                <button type="button" class="header__btn" aria-label="toggle navigation">
+                <button type="button" class="site-header__btn" aria-label="toggle navigation">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="h-6 w-6"
@@ -54,7 +54,11 @@
             </div>
         </header>
 
-        <div class="hero" style="background-image: url(assets/img/hero-bg.jpg)">
+        <div class="hero">
+            <div class="decor-hero">
+                <div class="decor-hero__main"></div>
+                <div class="decor-hero__birds"></div>
+            </div>
             <div class="container">
                 <!-- slider -->
 
@@ -98,50 +102,60 @@
         </div>
 
         <main>
-            <section>
+            <section id="project" class="section section--padding" style="--bg-color: #2a436e; z-index: 100; position: relative">
                 <div class="container">
                     <header class="section__header">
-                        <h2 class="section__title">The Vocational Education Program I</h2>
+                        <h2 class="section__title section__title--center">The Vocational Education Program I</h2>
                     </header>
 
-                    <p>
+                    <p class="project-description">
                         The German Government through KfW Development Bank has made available a loan of EUR 20 million (Investment Measure)
                         and a grant of EUR 3 million (Accompanying Measure) to the Government of Georgia for investing into the construction
                         and operation of a CoE, as a first of its kind TVET institution in two selected priority sectors of logistics and
                         construction.
                     </p>
 
-                    <div>
+                    <div class="about-project">
                         <div>
-                            <h3>Project Duration:</h3>
-                            <p>December 2021 – April 2026 (53 months)</p>
+                            <div>
+                                <h3>Project Duration:</h3>
+                                <p>December 2021 – April 2026 (53 months)</p>
+                            </div>
 
-                            <h3>Project Execution Agency (PEA):</h3>
-                            <p>Ministry of Education and Science of Georgia</p>
+                            <div>
+                                <h3>Project Execution Agency (PEA):</h3>
+                                <p>Ministry of Education and Science of Georgia</p>
+                            </div>
 
-                            <h3>Project Implementation Unit (PIU):</h3>
-                            <p>Educational and Scientific Infrastructure Development Agency (ESIDA)</p>
+                            <div>
+                                <h3>Project Implementation Unit (PIU):</h3>
+                                <p>Educational and Scientific Infrastructure Development Agency (ESIDA)</p>
+                            </div>
                         </div>
 
                         <div>
-                            <h3>Implementation Consultant:</h3>
-                            <p>PEM Consult GmbH (Germany)</p>
+                            <div>
+                                <h3>Implementation Consultant:</h3>
+                                <p>PEM Consult GmbH (Germany)</p>
+                            </div>
 
-                            <h3>Sub-contractors</h3>
-                            <p>Deutsche Bahn Engineering & Consulting (Germany)</p>
-                            <p>DMARK Architectural Design Company (Georgia)</p>
+                            <div>
+                                <h3>Sub-contractors</h3>
+                                <p>Deutsche Bahn Engineering & Consulting (Germany)</p>
+                                <p>DMARK Architectural Design Company (Georgia)</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="section">
+            <section id="mission" class="section section--mission" style="--bg-img: url(../img/mission-bg.jpg)">
                 <div class="container">
                     <header class="section__header">
-                        <h2 class="section__title">CoE Mission</h2>
+                        <h2 class="section__title section__title--center">CoE Mission</h2>
                     </header>
 
-                    <div>
+                    <div class="mission-description">
                         <p>
                             The Mission of the CoE is to lead and accelerate the development of excellence in human capital through the
                             joint efforts and shared, public-private responsibilities in the sectors of Construction and Logistics.
@@ -155,13 +169,13 @@
                 </div>
             </section>
 
-            <section class="section">
-                <div>
+            <section id="campus" class="section windmill-decor">
+                <div class="v-half v-half--right v-half--blue">
                     <header class="section__header">
-                        <h2 class="section__title">Green Campus</h2>
+                        <h2 class="section__title section__title--right">Green Campus</h2>
                     </header>
 
-                    <div>
+                    <div class="campus">
                         <p>
                             The state-of-art Center of Excellence will be located in the education city in Didi Digomi (Tbilisi) and will be
                             the first educational institution in the country that will provide a multi-functional green campus for its
@@ -175,15 +189,32 @@
                         </p>
                     </div>
                 </div>
+
+                <figure class="windmills">
+                    <div class="windmills__bg">
+                        <img src="assets/img/windmills.jpg" alt="" />
+                    </div>
+
+                    <div class="windmill">
+                        <img src="assets/img/windmill.png" alt="" />
+                    </div>
+                </figure>
+
+                <figure class="cloud-1">
+                    <img src="assets/img/cloud-1.png" alt="" />
+                </figure>
+                <figure class="cloud-2">
+                    <img src="assets/img/cloud-2.png" alt="" />
+                </figure>
             </section>
 
-            <section class="section">
-                <div>
+            <section id="program" class="section" style="background: url(assets/img/programs-services-bg.jpg) no-repeat">
+                <div class="v-half v-half--left v-half--white">
                     <header class="section__header">
-                        <h2 class="section__title">CoE Programs & Services</h2>
+                        <h2 class="section__title" style="color: #2a436e">CoE Programs & Services</h2>
                     </header>
 
-                    <div>
+                    <div class="programs-services">
                         <p>
                             The CoE will offer modularized, high-quality programs, capable of enhancing student professionalization,
                             business competitiveness and quality of life of Georgian society.
@@ -198,13 +229,13 @@
                 </div>
             </section>
 
-            <section class="section">
+            <section id="engagement" class="section section--engagement" style="background-image: url(assets/img/industry-bg.png)">
                 <div class="container">
                     <header class="section__header">
-                        <h2 class="section__title">Industry Engagement</h2>
+                        <h2 class="section__title section__title--center">Industry Engagement</h2>
                     </header>
 
-                    <div>
+                    <div class="engagement-description">
                         <p>
                             The engagement of the private sector is embedded in governance and operation of the CoE, including in CoE’s
                             advisory and management functions as well as in implementing and certifying demand oriented TVET programmes.
@@ -215,10 +246,10 @@
                 </div>
             </section>
 
-            <section class="section">
-                <div class="">
+            <section id="partners" class="section section--partners" style="background-image: url(assets/img/partners-bg.jpg)">
+                <div class="partners">
                     <header class="section__header">
-                        <h2 class="section__title">Network Partners</h2>
+                        <h2 class="section__title" style="color: #2a436e">Network Partners</h2>
                     </header>
 
                     <div>
@@ -233,101 +264,154 @@
                 </div>
             </section>
 
-            <section class="section">
-                <div class="">
-                    <header class="section__header">
-                        <h2 class="section__title">Internationalization</h2>
-                    </header>
+            <section id="internationalization" class="section">
+                <div class="container">
+                    <div class="internationalization-wrapper">
+                        <div class="inter-decor">
+                            <img src="assets/img/globe.png" alt="" />
+                        </div>
 
-                    <div>
-                        <p>
-                            As a flagship institution not only for its Georgian customers, the CoE will target on bringing internalization
-                            of TVET programs in construction and logistics for the whole Caucasus region. The programs offered by CoE will
-                            result in internationally recognized certification and will bring international partners and best practices in
-                            the area. Various exchange programs will be offered for students and teachers/trainers to provide a variety of
-                            digital tools for capacity building and practical training.
-                        </p>
+                        <div class="internationalization">
+                            <header class="section__header">
+                                <h2 class="section__title section__title--right" style="color: #2a436e">Internationalization</h2>
+                            </header>
+
+                            <div>
+                                <p>
+                                    As a flagship institution not only for its Georgian customers, the CoE will target on bringing
+                                    internalization of TVET programs in construction and logistics for the whole Caucasus region. The
+                                    programs offered by CoE will result in internationally recognized certification and will bring
+                                    international partners and best practices in the area. Various exchange programs will be offered for
+                                    students and teachers/trainers to provide a variety of digital tools for capacity building and practical
+                                    training.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section class="section">
+            <section id="team" class="section section--padding" style="--bg-color: #2a436e">
                 <div class="container">
                     <header class="section__header">
-                        <h2 class="section__title">Project Team</h2>
+                        <h2 class="section__title section__title--center">Project Team</h2>
                     </header>
 
-                    <div>
+                    <div class="about-team">
                         <p>
-                            As a flagship institution not only for its Georgian customers, the CoE will target on bringing internalization
-                            of TVET programs in construction and logistics for the whole Caucasus region. The programs offered by CoE will
-                            result in internationally recognized certification and will bring international partners and best practices in
-                            the area. Various exchange programs will be offered for students and teachers/trainers to provide a variety of
-                            digital tools for capacity building and practical training.
+                            PEM CONSULT, established in 1977 in Düsseldorf/Germany, is an independent private consulting firm providing
+                            advisory services and technical assistance to public institutions, private sector organizations and individual
+                            enterprises in developing countries and economies in transition. The guiding vision is to contribute to global
+                            sustainable development reflected in economic efficiency, social justice and ecological sustainability. For
+                            detailed information about PEM Consult, please visit: <a href="" target="_blank">www.pem-consult.de </a>
                         </p>
                     </div>
-                </div>
 
-                <div>
-                    <h3>The Project Core Team</h3>
+                    <h3 class="team-title">The Project Core Team</h3>
 
-                    <!-- slider -->
-                    <figure>
-                        <img src="" alt="" />
-                        <figcaption>Marita</figcaption>
-                    </figure>
+                    <!-- Slider main container -->
+                    <div class="swiper team__slider">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <figure class="team-member">
+                                    <img src="assets/img/team-1.jpg" alt="" />
+                                    <figcaption>Marita</figcaption>
+                                </figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="team-member">
+                                    <img src="assets/img/team-2.jpg" alt="" />
+                                    <figcaption>Valentin</figcaption>
+                                </figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="team-member">
+                                    <img src="assets/img/team-3.jpg" alt="" />
+                                    <figcaption>David</figcaption>
+                                </figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="team-member">
+                                    <img src="assets/img/team-1.jpg" alt="" />
+                                    <figcaption>Marita</figcaption>
+                                </figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="team-member">
+                                    <img src="assets/img/team-2.jpg" alt="" />
+                                    <figcaption>Valentin</figcaption>
+                                </figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="team-member">
+                                    <img src="assets/img/team-3.jpg" alt="" />
+                                    <figcaption>David</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
                 </div>
             </section>
 
-            <section class="section">
-                <div class="">
-                    <header class="section__header">
-                        <h2 class="section__title">Contact</h2>
-                    </header>
+            <section id="contact" class="section section--contact" style="background-image: url(assets/img/hero-bg.jpg)">
+                <div class="container">
+                    <div class="contact">
+                        <header class="section__header">
+                            <h2 class="section__title" style="color: #2a436e">Contact</h2>
+                        </header>
 
-                    <div>
-                        <address>
+                        <div class="contact__content">
+                            <address>
+                                <ul>
+                                    <li>
+                                        <span class="icon"></span>
+                                        <div>
+                                            <p>Dimitri Uznadze 52</p>
+                                            <small>Tbilisi, 0102, Georgia</small>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="icon"></span>
+                                        <div>
+                                            <a href="tel:+995322200220">+ 995 (322) 200 220</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="icon"></span>
+                                        <div>
+                                            <a href="mailto:pem@pem-consult.de">pem@pem-consult.de</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </address>
+
                             <ul>
                                 <li>
-                                    <span class="icon"></span>
-                                    <div>
-                                        <p>Dimitri Uznadze 52</p>
-                                        <small>Tbilisi, 0102, Georgia</small>
-                                    </div>
+                                    <a href="http://" target="_blank" rel="noopener noreferrer">icon</a>
                                 </li>
                                 <li>
-                                    <span class="icon"></span>
-                                    <div>
-                                        <a href="tel:+995322200220">+ 995 (322) 200 220</a>
-                                    </div>
+                                    <a href="http://" target="_blank" rel="noopener noreferrer">icon</a>
                                 </li>
                                 <li>
-                                    <span class="icon"></span>
-                                    <div>
-                                        <a href="mailto:pem@pem-consult.de">pem@pem-consult.de</a>
-                                    </div>
+                                    <a href="http://" target="_blank" rel="noopener noreferrer">icon</a>
                                 </li>
                             </ul>
-                        </address>
-
-                        <ul>
-                            <li>
-                                <a href="http://" target="_blank" rel="noopener noreferrer"></a>
-                            </li>
-                            <li>
-                                <a href="http://" target="_blank" rel="noopener noreferrer"></a>
-                            </li>
-                            <li>
-                                <a href="http://" target="_blank" rel="noopener noreferrer"></a>
-                            </li>
-                        </ul>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
 
         <footer class="site-footer">
-            <p>© All Rights reserved. Germany-Georgian institute of Technology</p>
+            <div class="container">
+                <p>© All Rights reserved. Germany-Georgian institute of Technology</p>
+            </div>
         </footer>
 
         <ul class="social-menu">

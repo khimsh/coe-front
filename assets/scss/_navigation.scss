@@ -1,3 +1,53 @@
 .site-nav {
     display: none;
+
+    @media (min-width: 1640px) {
+        display: block;
+        box-shadow: 0px 6px 14px 0 rgba(5, 7, 32, 0.54);
+        background-color: #fff;
+        padding-inline: 47px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 1640px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__link {
+        position: relative;
+
+        display: block;
+        font-size: 19.5px;
+        font-weight: 500;
+        color: #333;
+        text-decoration: none;
+
+        @media (min-width: 1640px) {
+            padding-block: 27px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 20px;
+            height: 2px;
+            background-color: transparent;
+            transition: background-color 150ms ease-in-out;
+        }
+
+        &.active,
+        &:hover,
+        &:focus {
+            &::after {
+                background-color: #d68049;
+            }
+        }
+    }
 }

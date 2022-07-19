@@ -3,4 +3,22 @@
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1000;
+
+    &__btn {
+        display: block;
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+
+        svg {
+            width: 36px;
+            height: 36px;
+            display: block;
+        }
+
+        @media (min-width: 1620px) {
+            display: none;
+        }
+    }
 }

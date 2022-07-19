@@ -22,9 +22,15 @@
 
 .inter-decor {
     margin-top: -170px;
+
+    @media (max-width: 1440px) {
+        display: none;
+    }
+
     img {
         width: 632px;
-        height: 740px;
+        height: auto;
+        object-fit: cover;
     }
 }
 

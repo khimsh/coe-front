@@ -6,6 +6,23 @@
     box-sizing: border-box;
 }
 
+:root {
+    --text: 16px;
+
+    @media (min-width: 768px) {
+        --text: 18px;
+    }
+    @media (min-width: 1200px) {
+        --text: 20px;
+    }
+    @media (min-width: 1440px) {
+        --text: 24px;
+    }
+    @media (min-width: 1920px) {
+        --text: 28px;
+    }
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -117,11 +134,8 @@ a {
     background-color: var(--bg-color);
 
     @media (min-width: 1366px) {
-        --fz-title: 72px;
         --fz-description: 31px;
         --fz-h3: 36px;
-        // --fz-p: 31px;
-        --fz-p: 28px;
     }
 
     &--mission {
@@ -170,7 +184,7 @@ a {
     }
 
     &__title {
-        font-size: var(--fz-title, 30px);
+        font-size: clamp(28px, 3vw + 1rem, 72px);
         font-weight: 200;
         line-height: 1.15;
         color: #fff;
@@ -224,7 +238,7 @@ a {
     }
 
     p {
-        font-size: var(--fz-p, 16px);
+        font-size: var(--text);
         color: #fefefe;
     }
 }
@@ -234,13 +248,8 @@ a {
     flex-direction: column;
     gap: 40px;
 
-    @media (min-width: 1366px) {
-        // --fz-p: 31px;
-        --fz-p: 28px;
-    }
-
     p {
-        font-size: var(--fz-p, 16px);
+        font-size: var(--text);
         text-align: justify;
         color: #fefefe;
     }
@@ -288,13 +297,8 @@ a {
     flex-direction: column;
     gap: 40px;
 
-    @media (min-width: 1366px) {
-        // --fz-p: 31px;
-        --fz-p: 28px;
-    }
-
     p {
-        font-size: var(--fz-p, 16px);
+        font-size: var(--text);
         text-align: justify;
         color: #fefefe;
     }
@@ -305,13 +309,8 @@ a {
     flex-direction: column;
     gap: 40px;
 
-    @media (min-width: 1366px) {
-        // --fz-p: 31px;
-        --fz-p: 28px;
-    }
-
     p {
-        font-size: var(--fz-p, 16px);
+        font-size: var(--text);
         text-align: justify;
         color: #2a436e;
     }
@@ -381,8 +380,6 @@ a {
         }
 
         @media (min-width: 1366px) {
-            // --fz-p: 31px;
-            --fz-p: 28px;
             --fz-small: 22px;
         }
 
@@ -402,7 +399,7 @@ a {
             }
 
             a {
-                font-size: var(--fz-p, 16px);
+                font-size: var(--text);
                 text-align: justify;
                 color: #2a436e;
                 text-decoration: none;
@@ -487,13 +484,8 @@ a {
     --clr: #fff;
     --ta: justify;
 
-    @media (min-width: 1366px) {
-        // --fz-p: 31px;
-        --fz-p: 28px;
-    }
-
     p {
-        font-size: var(--fz-p, 16px);
+        font-size: var(--text);
         text-align: var(--ta);
         color: var(--clr);
     }

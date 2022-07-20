@@ -6,6 +6,30 @@
   box-sizing: border-box;
 }
 
+:root {
+  --text: 16px;
+}
+@media (min-width: 768px) {
+  :root {
+    --text: 18px;
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --text: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  :root {
+    --text: 24px;
+  }
+}
+@media (min-width: 1920px) {
+  :root {
+    --text: 28px;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -108,10 +132,8 @@ a {
 }
 @media (min-width: 1366px) {
   .section {
-    --fz-title: 72px;
     --fz-description: 31px;
     --fz-h3: 36px;
-    --fz-p: 28px;
   }
 }
 .section--mission {
@@ -155,7 +177,7 @@ a {
   }
 }
 .section__title {
-  font-size: var(--fz-title, 30px);
+  font-size: clamp(28px, 3vw + 1rem, 72px);
   font-weight: 200;
   line-height: 1.15;
   color: #fff;
@@ -205,7 +227,7 @@ a {
   color: #d68049;
 }
 .about-project p {
-  font-size: var(--fz-p, 16px);
+  font-size: var(--text);
   color: #fefefe;
 }
 
@@ -214,13 +236,8 @@ a {
   flex-direction: column;
   gap: 40px;
 }
-@media (min-width: 1366px) {
-  .mission-description {
-    --fz-p: 28px;
-  }
-}
 .mission-description p {
-  font-size: var(--fz-p, 16px);
+  font-size: var(--text);
   text-align: justify;
   color: #fefefe;
 }
@@ -268,13 +285,8 @@ a {
   flex-direction: column;
   gap: 40px;
 }
-@media (min-width: 1366px) {
-  .campus {
-    --fz-p: 28px;
-  }
-}
 .campus p {
-  font-size: var(--fz-p, 16px);
+  font-size: var(--text);
   text-align: justify;
   color: #fefefe;
 }
@@ -284,13 +296,8 @@ a {
   flex-direction: column;
   gap: 40px;
 }
-@media (min-width: 1366px) {
-  .programs-services {
-    --fz-p: 28px;
-  }
-}
 .programs-services p {
-  font-size: var(--fz-p, 16px);
+  font-size: var(--text);
   text-align: justify;
   color: #2a436e;
 }
@@ -360,7 +367,6 @@ a {
 }
 @media (min-width: 1366px) {
   .contact__content {
-    --fz-p: 28px;
     --fz-small: 22px;
   }
 }
@@ -378,7 +384,7 @@ a {
   color: #d68049;
 }
 .contact__content address a {
-  font-size: var(--fz-p, 16px);
+  font-size: var(--text);
   text-align: justify;
   color: #2a436e;
   text-decoration: none;
@@ -450,13 +456,8 @@ a {
   --clr: #fff;
   --ta: justify;
 }
-@media (min-width: 1366px) {
-  .text-flow {
-    --fz-p: 28px;
-  }
-}
 .text-flow p {
-  font-size: var(--fz-p, 16px);
+  font-size: var(--text);
   text-align: var(--ta);
   color: var(--clr);
 }

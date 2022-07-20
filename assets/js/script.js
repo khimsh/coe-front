@@ -68,4 +68,30 @@
     }
 
     mobileNav()
+
+    /************************
+        Image Animation
+    *************************/
+
+    const observer = new IntersectionObserver(cb, {
+        root: null,
+        threshold: 1,
+    })
+
+    function cb(payload) {
+        let initialOffset = 1
+        let initialScale = 1
+        const elem = payload[0]
+
+        if (elem.isIntersecting) {
+            document.addEventListener('scroll', () => {
+                let wo = window.scrollY
+                let newScale = wo * 0.0006 + initialScale
+                let newOffset = wo * 0.0001 + initialOffset
+                elem.target.style.transform = `translateY(${newOffset}px) scale(${newScale})`
+            })
+        }
+    }
+
+    observer.observe(document.querySelector('.decor-hero__birds'))
 })()

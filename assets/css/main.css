@@ -143,9 +143,7 @@ a {
 }
 @media (min-width: 1440px) {
   .section--mission {
-    padding-top: 100vh;
-    margin-top: -50vh;
-    padding-bottom: 300px;
+    padding-top: 50vh;
     z-index: -1;
   }
 }
@@ -679,7 +677,9 @@ a {
 }
 .mission-decor img {
   object-fit: cover;
+  object-position: top;
   height: 100%;
+  width: 100%;
 }
 .mission-decor__main {
   position: absolute;
@@ -687,8 +687,9 @@ a {
 }
 .mission-decor__handshake {
   position: absolute;
-  inset: 0;
-  display: none;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
 /************************

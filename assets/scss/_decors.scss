@@ -104,7 +104,9 @@
 
     img {
         object-fit: cover;
+        object-position: top;
         height: 100%;
+        width: 100%;
     }
 
     &__main {
@@ -114,7 +116,9 @@
 
     &__handshake {
         position: absolute;
-        inset: 0;
-        display: none;
+        top: 0;
+        right: 0;
+        left: 0;
+        // display: none;
     }
 }

@@ -73,7 +73,8 @@
         Image Animation
     *************************/
 
-    const observer = new IntersectionObserver(cb, {
+    // Hero Section
+    const observerHero = new IntersectionObserver(cb, {
         root: null,
         threshold: 1,
     })
@@ -93,5 +94,5 @@
         }
     }
 
-    observer.observe(document.querySelector('.decor-hero__birds'))
+    observerHero.observe(document.querySelector('.decor-hero__birds'))
 })()

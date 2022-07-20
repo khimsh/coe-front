@@ -144,9 +144,8 @@ a {
         padding-block: 20vh;
 
         @media (min-width: 1440px) {
-            padding-top: 100vh;
-            margin-top: -50vh;
-            padding-bottom: 300px;
+            padding-top: 50vh;
+            // margin-top: -50vh;
             z-index: -1;
         }
     }

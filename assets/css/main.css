@@ -600,12 +600,23 @@ a {
 }
 .decor-hero__birds {
   position: absolute;
-  top: 200px;
-  right: 200px;
-  width: 1007px;
-  height: 629px;
-  background-image: url(../img/birds.png);
-  background-repeat: no-repeat;
+  top: 30%;
+  right: 2%;
+}
+@media (min-width: 1920px) {
+  .decor-hero__birds {
+    top: 10%;
+  }
+}
+.decor-hero__birds img {
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 1920px) {
+  .decor-hero__birds img {
+    width: 1007px;
+    height: 629px;
+  }
 }
 
 .inter-decor {

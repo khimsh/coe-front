@@ -171,7 +171,11 @@ a {
     }
 
     &--engagement {
-        padding-block: 208px 225px;
+        padding-block: 100px;
+
+        @media (min-width: 1366px) {
+            padding-block: 208px 225px;
+        }
     }
 
     &--news {
@@ -309,6 +313,8 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    z-index: 100;
 
     @media (min-width: 1366px) {
         width: 50%;
@@ -366,6 +372,8 @@ a {
 }
 
 .partners {
+    position: relative;
+    z-index: 1000;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 100px 70px 100px 1rem;
 

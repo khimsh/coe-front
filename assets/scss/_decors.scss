@@ -122,3 +122,23 @@
         // display: none;
     }
 }
+
+.birds {
+    position: absolute;
+    left: 0;
+    bottom: -100px;
+
+    @media (min-width: 1920px) {
+        left: 20%;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+
+        @media (min-width: 1920px) {
+            width: 572px;
+            height: 401px;
+        }
+    }
+}

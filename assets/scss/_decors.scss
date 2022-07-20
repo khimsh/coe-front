@@ -85,3 +85,26 @@
         }
     }
 }
+
+.mission-decor {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: -1;
+
+    img {
+        object-fit: cover;
+        height: 100%;
+    }
+
+    &__main {
+        position: absolute;
+        inset: 0;
+    }
+
+    &__handshake {
+        position: absolute;
+        inset: 0;
+        display: none;
+    }
+}

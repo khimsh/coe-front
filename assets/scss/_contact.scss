@@ -1,0 +1,90 @@
+/************************
+        Contact
+*************************/
+.contact {
+    max-width: 984px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+
+    @media (min-width: 1920px) {
+        padding: 34px 60px 34px 83px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+
+        @media (min-width: 1920px) {
+            flex-direction: row;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        @media (min-width: 1440px) {
+            --fz-small: 22px;
+        }
+
+        address {
+            font-style: normal;
+
+            li {
+                display: flex;
+                align-items: baseline;
+                gap: 13px;
+
+                i {
+                    line-height: 1;
+                    font-size: 1rem;
+                    color: #d68049;
+
+                    @media (min-width: 1920px) {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+
+            a {
+                font-size: var(--text);
+                text-align: justify;
+                color: #2a436e;
+                text-decoration: none;
+            }
+
+            small {
+                font-size: var(--fz-small, 14px);
+                color: #2a436e;
+            }
+        }
+    }
+
+    &__social {
+        gap: 20px !important;
+        align-items: center;
+        flex-direction: row !important;
+
+        @media (min-width: 1920px) {
+            flex-direction: column !important;
+        }
+
+        a {
+            font-size: 1.5rem;
+            color: #2a436e;
+            transition: color 150ms ease-in-out;
+
+            @media (min-width: 1920px) {
+                font-size: 2rem;
+            }
+
+            &:hover,
+            &:focus {
+                color: #d68049;
+            }
+        }
+    }
+}

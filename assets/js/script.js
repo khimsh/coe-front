@@ -72,36 +72,7 @@
     /************************
         Image Animation
     *************************/
-
-    // Hero Section
-    const observerHero = new IntersectionObserver(cb, {
-        root: null,
-        threshold: 1,
-    })
-
-    function cb(payload) {
-        let initialOffset = 1
-        let initialScale = 1
-        const elem = payload[0]
-
-        if (elem.isIntersecting) {
-            document.addEventListener('scroll', () => {
-                let wo = window.scrollY
-                let newScale = wo * 0.0006 + initialScale
-                let newOffset = wo * 0.0001 + initialOffset
-                elem.target.style.transform = `translateY(${newOffset}px) scale(${newScale})`
-            })
-        }
-    }
-
-    observerHero.observe(document.querySelector('.decor-hero__birds'))
-
-    const observerBirds2 = new IntersectionObserver(cb, {
-        root: null,
-        threshold: 1,
-    })
-
-    function cb(payload) {
+    function cb(payload, scaleSize, offsetSize) {
         let initialOffset = 1
         let initialScale = 1
         const elem = payload[0]
@@ -110,116 +81,89 @@
             const starterScrollY = window.scrollY
             document.addEventListener('scroll', () => {
                 let wo = window.scrollY - starterScrollY
-                let newScale = wo * 0.0002 + initialScale < 1 ? 1 : wo * 0.0002 + initialScale
-                let newOffset = wo * 0.0001 + initialOffset
+                let newScale = wo * scaleSize + initialScale < 1 ? 1 : wo * scaleSize + initialScale
+                let newOffset = wo * offsetSize + initialOffset
                 elem.target.style.transform = `translateY(${newOffset}px) scale(${newScale})`
             })
         }
     }
+
+    // Hero Section
+    const observerHero = new IntersectionObserver(
+        (payload) => {
+            cb(payload, 0.0006, 0.001)
+        },
+        {
+            threshold: 1,
+        }
+    )
+
+    observerHero.observe(document.querySelector('.decor-hero__birds'))
+
+    const observerBirds2 = new IntersectionObserver(
+        (payload) => {
+            cb(payload, 0.0002, 0.003)
+        },
+        {
+            threshold: 1,
+        }
+    )
 
     observerBirds2.observe(document.querySelector('.birds'))
 
     // Mission Section
     const handshake = document.querySelector('.mission-decor__handshake')
 
-    const observerMission = new IntersectionObserver(cb2, {
-        root: null,
-        threshold: 1,
-    })
-
-    function cb2(payload) {
-        let initialOffset = 1
-        let initialScale = 1
-        const elem = payload[0]
-
-        if (elem.isIntersecting) {
-            const starterScrollY = window.scrollY
-            document.addEventListener('scroll', () => {
-                let wo = window.scrollY - starterScrollY
-                let newScale = wo * 0.0002 + initialScale < 1 ? 1 : wo * 0.0002 + initialScale
-                let newOffset = wo * 0.005 + initialOffset
-                elem.target.style.transform = `translateY(${newOffset}%) scale(${newScale})`
-            })
+    const observerMission = new IntersectionObserver(
+        (payload) => {
+            cb(payload, 0.0001, 0.05)
+        },
+        {
+            threshold: 1,
         }
-    }
+    )
 
     observerMission.observe(handshake)
 
     // Clouds Section
     const cloud1 = document.querySelector('.cloud-1')
 
-    const observerCloud1 = new IntersectionObserver(cb3, {
-        root: null,
-        threshold: 1,
-    })
-
-    function cb3(payload) {
-        let initialOffset = 1
-        let initialScale = 1
-        const elem = payload[0]
-
-        if (elem.isIntersecting) {
-            const starterScrollY = window.scrollY
-            document.addEventListener('scroll', () => {
-                let wo = window.scrollY - starterScrollY
-                let newScale = wo * 0.0002 + initialScale < 1 ? 1 : wo * 0.0002 + initialScale
-                let newOffset = wo * 0.015 + initialOffset
-                elem.target.style.transform = `translateY(${newOffset}%) scale(${newScale})`
-            })
+    const observerCloud1 = new IntersectionObserver(
+        (payload) => {
+            cb(payload, 0.0001, -0.2)
+        },
+        {
+            threshold: 1,
         }
-    }
+    )
 
     observerCloud1.observe(cloud1)
 
     // Clouds Section
     const cloud2 = document.querySelector('.cloud-2')
 
-    const observerCloud2 = new IntersectionObserver(cb4, {
-        root: null,
-        threshold: 1,
-    })
-
-    function cb4(payload) {
-        let initialOffset = 1
-        let initialScale = 1
-        const elem = payload[0]
-
-        if (elem.isIntersecting) {
-            const starterScrollY = window.scrollY
-            document.addEventListener('scroll', () => {
-                let wo = window.scrollY - starterScrollY
-                let newScale = wo * 0.0003 + initialScale < 1 ? 1 : wo * 0.0003 + initialScale
-                let newOffset = wo * 0.01 + initialOffset
-                elem.target.style.transform = `translateY(${newOffset}%) scale(${newScale})`
-            })
+    const observerCloud2 = new IntersectionObserver(
+        (payload) => {
+            cb(payload, 0.0004, 0.02)
+        },
+        {
+            threshold: 1,
         }
-    }
+    )
 
     observerCloud2.observe(cloud2)
 
     // Clouds Section
     const windmill = document.querySelector('.windmill')
 
-    const observerWindmill = new IntersectionObserver(cb5, {
-        root: null,
-        threshold: 1,
-    })
-
-    function cb5(payload) {
-        let initialOffset = 1
-        let initialScale = 1
-        const elem = payload[0]
-
-        if (elem.isIntersecting) {
-            const starterScrollY = window.scrollY
-            document.addEventListener('scroll', () => {
-                let wo = window.scrollY - starterScrollY
-                let newScale = wo * 0.0001 + initialScale < 1 ? 1 : wo * 0.0001 + initialScale
-                let newOffset = wo * 0.0001 + initialOffset
-                elem.target.style.transform = `translateY(${newOffset}%) scale(${newScale})`
-            })
+    const observerWindmill = new IntersectionObserver(
+        (payload) => {
+            cb(payload, 0, 0)
+        },
+        {
+            threshold: 1,
         }
-    }
+    )
 
     observerWindmill.observe(windmill)
 })()

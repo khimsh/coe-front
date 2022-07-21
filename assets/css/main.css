@@ -733,6 +733,11 @@ a {
     height: auto;
   }
 }
+@media (min-width: 1440px) {
+  .birds img {
+    width: 560px;
+  }
+}
 @media (min-width: 3600px) {
   .birds img {
     width: 1500px;

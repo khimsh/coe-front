@@ -99,7 +99,6 @@
 .mission-decor {
     position: absolute;
     inset: 0;
-    z-index: -1;
 
     img {
         object-fit: cover;
@@ -111,6 +110,10 @@
     &__main {
         position: absolute;
         inset: 0;
+
+        img {
+            object-fit: unset;
+        }
     }
 
     &__handshake {
@@ -118,7 +121,7 @@
         top: 0;
         right: 0;
         left: 0;
-        // display: none;
+        z-index: 100;
     }
 }
 

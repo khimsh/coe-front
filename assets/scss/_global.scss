@@ -141,12 +141,22 @@ a {
 
     &--mission {
         position: relative;
-        padding-block: 20vh;
+        margin-top: -10vw;
 
         @media (min-width: 1440px) {
-            padding-top: 50vh;
-            // margin-top: -50vh;
-            z-index: -1;
+            margin-top: -24vh;
+        }
+
+        .container {
+            position: relative;
+            z-index: 10000;
+
+            padding-top: 50vw;
+            padding-bottom: 10vw;
+
+            @media (min-width: 1440px) {
+                padding-top: 110vh;
+            }
         }
     }
 

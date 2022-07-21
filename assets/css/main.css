@@ -139,12 +139,22 @@ a {
 }
 .section--mission {
   position: relative;
-  padding-block: 20vh;
+  margin-top: -10vw;
 }
 @media (min-width: 1440px) {
   .section--mission {
-    padding-top: 50vh;
-    z-index: -1;
+    margin-top: -24vh;
+  }
+}
+.section--mission .container {
+  position: relative;
+  z-index: 10000;
+  padding-top: 50vw;
+  padding-bottom: 10vw;
+}
+@media (min-width: 1440px) {
+  .section--mission .container {
+    padding-top: 110vh;
   }
 }
 .section--padding {
@@ -665,7 +675,6 @@ a {
 .mission-decor {
   position: absolute;
   inset: 0;
-  z-index: -1;
 }
 .mission-decor img {
   object-fit: cover;
@@ -677,11 +686,15 @@ a {
   position: absolute;
   inset: 0;
 }
+.mission-decor__main img {
+  object-fit: unset;
+}
 .mission-decor__handshake {
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
+  z-index: 100;
 }
 
 .birds {

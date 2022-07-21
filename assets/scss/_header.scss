@@ -9,21 +9,22 @@
     z-index: 1000;
 
     &__btn {
-        margin-top: 20px;
+        position: fixed;
+        top: 40px;
+        right: 0;
         width: 42px;
         height: 42px;
         display: grid;
         place-content: center;
-        // color: #d68049;
         color: #2a436e;
         background-color: #fff;
         border: 0;
         cursor: pointer;
-
+        z-index: 2;
         font-size: 1.4rem;
 
-        @media (min-width: 1620px) {
-            display: none;
+        i {
+            pointer-events: none;
         }
     }
 }

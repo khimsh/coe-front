@@ -2,66 +2,52 @@
         Navigation
 *************************/
 .site-nav {
-    max-height: 0;
-    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 40px;
+    padding: 18px 60px 33px 49px;
     background-color: #fff;
-    transition: max-height 200ms ease-in-out;
+    z-index: 1;
+
+    transform: scale(0);
+    transition: transform 200ms ease-in-out;
+    transform-origin: top right;
 
     &.active {
-        max-height: 1000px;
+        transform: scale(1);
     }
 
-    @media (min-width: 1640px) {
-        max-height: unset;
-        box-shadow: 0px 6px 14px 0 rgba(5, 7, 32, 0.54);
-        padding-inline: 47px;
-        padding-block: unset;
-    }
-
-    &__list {
-        padding: 20px;
-
+    &__li {
         display: flex;
-        flex-direction: column;
-        gap: 20px;
-
-        @media (min-width: 1640px) {
-            padding: unset;
-            flex-direction: row;
-            justify-content: space-between;
-        }
+        justify-content: flex-end;
     }
 
     &__link {
         position: relative;
-        display: block;
+        display: inline-block;
         font-size: 19.5px;
         font-weight: 500;
+        line-height: 1.95;
+        text-align: right;
         color: #333;
         text-decoration: none;
-
-        @media (min-width: 1640px) {
-            padding-block: 27px;
-        }
 
         &::after {
             content: '';
             position: absolute;
+            bottom: 0;
             left: 0;
             right: 0;
-            bottom: 0px;
-            height: 2px;
+            height: 3px;
             background-color: transparent;
             transition: background-color 150ms ease-in-out;
-
-            @media (min-width: 1640px) {
-                bottom: 20px;
-            }
         }
 
-        &.active,
         &:hover,
-        &:focus {
+        &:focus,
+        &.active {
+            color: #000;
+
             &::after {
                 background-color: #d68049;
             }

@@ -51,6 +51,20 @@
                 openNav.innerHTML = '<i class="fa-solid fa-bars"></i>'
             }
         })
+        // openNav.addEventListener('focus', () => {
+        //     if (nav.classList.contains('active')) return
+
+        //     nav.classList.add('active')
+        //     openNav.innerHTML = '<i class="fa-solid fa-xmark"></i>'
+        // })
+        // openNav.addEventListener('blur', () => {
+        //     links.forEach((link) => {
+        //         // if (link !== document.activeElement) {
+        //         nav.classList.remove('active')
+        //         openNav.innerHTML = '<i class="fa-solid fa-bars"></i>'
+        //         // }
+        //     })
+        // })
 
         links.forEach((link) => {
             link.addEventListener('click', () => {

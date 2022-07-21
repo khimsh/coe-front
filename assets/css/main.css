@@ -510,7 +510,9 @@ a {
   z-index: 1000;
 }
 .site-header__btn {
-  margin-top: 20px;
+  position: fixed;
+  top: 40px;
+  right: 0;
   width: 42px;
   height: 42px;
   display: grid;
@@ -519,76 +521,58 @@ a {
   background-color: #fff;
   border: 0;
   cursor: pointer;
+  z-index: 2;
   font-size: 1.4rem;
 }
-@media (min-width: 1620px) {
-  .site-header__btn {
-    display: none;
-  }
+.site-header__btn i {
+  pointer-events: none;
 }
 
 /************************
         Navigation
 *************************/
 .site-nav {
-  max-height: 0;
-  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 40px;
+  padding: 18px 60px 33px 49px;
   background-color: #fff;
-  transition: max-height 200ms ease-in-out;
+  z-index: 1;
+  transform: scale(0);
+  transition: transform 200ms ease-in-out;
+  transform-origin: top right;
 }
 .site-nav.active {
-  max-height: 1000px;
+  transform: scale(1);
 }
-@media (min-width: 1640px) {
-  .site-nav {
-    max-height: unset;
-    box-shadow: 0px 6px 14px 0 rgba(5, 7, 32, 0.54);
-    padding-inline: 47px;
-    padding-block: unset;
-  }
-}
-.site-nav__list {
-  padding: 20px;
+.site-nav__li {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-@media (min-width: 1640px) {
-  .site-nav__list {
-    padding: unset;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+  justify-content: flex-end;
 }
 .site-nav__link {
   position: relative;
-  display: block;
+  display: inline-block;
   font-size: 19.5px;
   font-weight: 500;
+  line-height: 1.95;
+  text-align: right;
   color: #333;
   text-decoration: none;
-}
-@media (min-width: 1640px) {
-  .site-nav__link {
-    padding-block: 27px;
-  }
 }
 .site-nav__link::after {
   content: "";
   position: absolute;
+  bottom: 0;
   left: 0;
   right: 0;
-  bottom: 0px;
-  height: 2px;
+  height: 3px;
   background-color: transparent;
   transition: background-color 150ms ease-in-out;
 }
-@media (min-width: 1640px) {
-  .site-nav__link::after {
-    bottom: 20px;
-  }
+.site-nav__link:hover, .site-nav__link:focus, .site-nav__link.active {
+  color: #000;
 }
-.site-nav__link.active::after, .site-nav__link:hover::after, .site-nav__link:focus::after {
+.site-nav__link:hover::after, .site-nav__link:focus::after, .site-nav__link.active::after {
   background-color: #d68049;
 }
 

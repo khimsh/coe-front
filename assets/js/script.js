@@ -116,7 +116,7 @@
 
     const observerBirds2 = new IntersectionObserver(
         (payload) => {
-            cb(payload, 0.0002, 0.003)
+            cb(payload, 0, 0.1)
         },
         {
             threshold: 1,

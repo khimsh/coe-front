@@ -58,8 +58,12 @@ a {
 }
 
 .container {
-    width: min(100vw - 2rem, 1605px);
+    width: 88vw;
     margin-inline: auto;
+
+    @media (min-width: 1920px) {
+        width: 1605px;
+    }
 }
 
 /************************
@@ -172,12 +176,16 @@ a {
 
     &--contact {
         padding-block: 212px;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     &--partners {
         height: 100vh;
         display: flex;
         align-items: center;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     &--engagement {
@@ -198,6 +206,11 @@ a {
         @media (min-width: 1366px) {
             margin-bottom: 57px;
         }
+    }
+
+    &--program {
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     &__title {
@@ -325,25 +338,25 @@ a {
     justify-content: center;
     position: relative;
     z-index: 100;
+    padding-inline: 6vw;
 
     @media (min-width: 1366px) {
+        padding-inline: unset;
         width: 50%;
         height: 100vh;
     }
 
     &--right {
-        padding-inline: 1rem;
         @media (min-width: 1366px) {
             margin-left: auto;
-            padding-right: 60px;
+            padding-right: 100px;
             padding-left: 116px;
         }
     }
 
     &--left {
-        padding-inline: 1rem;
         @media (min-width: 1366px) {
-            padding-left: 60px;
+            padding-left: 100px;
             padding-right: 116px;
         }
     }
@@ -388,7 +401,7 @@ a {
     padding: 100px 70px 100px 1rem;
 
     @media (min-width: 1366px) {
-        max-width: 870px;
+        max-width: 50vw;
     }
 
     @media (min-width: 1637px) {

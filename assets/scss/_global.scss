@@ -215,7 +215,7 @@ a {
         padding-block: 100px;
         position: relative;
 
-        @media (min-width: 1366px) {
+        @media (min-width: 1365px) {
             padding-block: 208px 225px;
         }
     }
@@ -366,7 +366,7 @@ a {
 
     --padding: 100px;
 
-    @media (min-width: 1366px) {
+    @media (min-width: 1100px) {
         padding-inline: unset;
         padding-block: 2rem;
         width: 50%;
@@ -376,7 +376,7 @@ a {
     }
 
     &--right {
-        @media (min-width: 1366px) {
+        @media (min-width: 1100px) {
             margin-left: auto;
             padding-right: var(--padding);
             padding-left: 116px;
@@ -384,7 +384,7 @@ a {
     }
 
     &--left {
-        @media (min-width: 1366px) {
+        @media (min-width: 1100px) {
             padding-left: var(--padding);
             padding-right: 116px;
         }

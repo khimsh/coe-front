@@ -56,10 +56,6 @@
     position: relative;
 
     .windmills {
-        // position: absolute;
-        // inset: 0;
-        // z-index: -1;
-
         &__bg {
             overflow: hidden;
             position: absolute;
@@ -83,20 +79,56 @@
     @media (min-width: 1440px) {
         .windmill {
             position: absolute;
-            top: -100px;
+            top: 30px;
             display: block;
         }
 
         .cloud-1 {
             position: absolute;
-            top: -100px;
+            top: -200px;
             display: block;
         }
         .cloud-2 {
             position: absolute;
-            top: -100px;
+            top: -20px;
             right: 0;
             display: block;
+        }
+    }
+
+    @media (min-width: 2500px) {
+        .windmill {
+            top: -130px;
+        }
+        .cloud-2 {
+            top: -120px;
+        }
+    }
+
+    .windmill {
+        img {
+            @media (min-width: 2500px) {
+                height: 900px;
+                width: auto;
+            }
+        }
+    }
+
+    .cloud-1 {
+        img {
+            @media (min-width: 2500px) {
+                height: 700px;
+                width: auto;
+            }
+        }
+    }
+
+    .cloud-2 {
+        img {
+            @media (min-width: 2500px) {
+                height: 700px;
+                width: auto;
+            }
         }
     }
 }
@@ -116,8 +148,22 @@
         position: absolute;
         inset: 0;
 
+        @media (max-width: 768px) {
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background-color: #2a436e;
+                opacity: 0.4;
+            }
+        }
+
         img {
             object-fit: unset;
+
+            @media (max-width: 768px) {
+                object-fit: cover;
+            }
         }
     }
 
@@ -127,13 +173,17 @@
         right: 0;
         left: 0;
         z-index: 100;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
 }
 
 .birds {
     position: absolute;
     left: 5vw;
-    bottom: -100px;
+    bottom: -25vw;
 
     @media (min-width: 1920px) {
         left: 20%;
@@ -151,8 +201,9 @@
         @media (min-width: 1440px) {
             width: 560px;
         }
-        @media (min-width: 3600px) {
-            width: 1500px;
+
+        @media (min-width: 2500px) {
+            width: 900px;
         }
     }
 }

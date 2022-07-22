@@ -25,6 +25,12 @@
         <link rel="stylesheet" href="assets/css/main.css" />
 
         <!-- JS -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"
+            integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
         <script src="assets/js/swiper-bundle.min.js" defer></script>
         <script src="assets/js/script.js" defer></script>
     </head>
@@ -53,7 +59,7 @@
         <div class="hero">
             <div class="decor-hero">
                 <div class="decor-hero__main"></div>
-                <div class="decor-hero__birds">
+                <div class="decor-hero__birds rellax" data-rellax-speed="-5">
                     <img src="assets/img/birds.png" alt="" />
                 </div>
             </div>
@@ -174,7 +180,12 @@
                     <div class="mission-decor__main">
                         <img src="assets/img/mission-bg.jpg" alt="" />
                     </div>
-                    <div class="mission-decor__handshake">
+                    <div
+                        class="mission-decor__handshake rellax"
+                        data-rellax-speed="-5"
+                        data-rellax-tablet-speed="0.4"
+                        data-rellax-desktop-speed="2"
+                    >
                         <img src="assets/img/handshake.png" alt="" />
                     </div>
                 </div>
@@ -208,15 +219,15 @@
                         <img src="assets/img/windmills.jpg" alt="" />
                     </div>
 
-                    <div class="windmill">
+                    <div class="windmill rellax" data-rellax-speed="0.5">
                         <img src="assets/img/windmill.png" alt="" />
                     </div>
                 </figure>
 
-                <figure class="cloud-1">
+                <figure class="cloud-1 rellax" data-rellax-speed="-0.5">
                     <img src="assets/img/cloud-1.png" alt="" />
                 </figure>
-                <figure class="cloud-2">
+                <figure class="cloud-2 rellax" data-rellax-speed="0.5">
                     <img src="assets/img/cloud-2.png" alt="" />
                 </figure>
             </section>
@@ -242,11 +253,7 @@
                 </div>
             </section>
 
-            <section
-                id="engagement"
-                class="section section--engagement"
-                style="background-image: url(assets/img/industry-bg.png); position: relative"
-            >
+            <section id="engagement" class="section section--engagement" style="background-image: url(assets/img/industry-bg.png)">
                 <div class="container">
                     <header class="section__header">
                         <h2 class="section__title section__title--center section__title--line-center section__title--line-blue">
@@ -264,7 +271,7 @@
                     </div>
                 </div>
 
-                <div class="birds">
+                <div class="birds rellax" data-rellax-speed="1">
                     <img src="assets/img/birds.png" alt="" />
                 </div>
             </section>

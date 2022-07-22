@@ -19,12 +19,20 @@
         gap: 36px;
     }
 
+    @media (min-width: 2500px) {
+        grid-template-columns: 1200px 1fr;
+    }
+
     &__img {
         max-height: 240px;
         overflow: hidden;
 
         @media (min-width: 1200px) {
             max-height: 422px;
+        }
+
+        @media (min-width: 2500px) {
+            max-height: 622px;
         }
 
         img {
@@ -50,6 +58,10 @@
             @media (min-width: 1920px) {
                 font-size: 36.5px;
             }
+
+            @media (min-width: 2500px) {
+                font-size: 64px;
+            }
         }
 
         time {
@@ -58,6 +70,10 @@
 
             @media (min-width: 1920px) {
                 font-size: 25px;
+            }
+
+            @media (min-width: 2500px) {
+                font-size: 40px;
             }
         }
     }

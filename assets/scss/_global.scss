@@ -21,6 +21,9 @@
     @media (min-width: 1920px) {
         --text: 28px;
     }
+    @media (min-width: 2500px) {
+        --text: 38px;
+    }
 }
 
 html {
@@ -64,6 +67,9 @@ a {
     @media (min-width: 1920px) {
         width: 1605px;
     }
+    @media (min-width: 2500px) {
+        width: 80vw;
+    }
 }
 
 /************************
@@ -73,14 +79,19 @@ a {
     position: relative;
     // min-height: 100dvh;
     height: 100vh;
+    z-index: 1000;
 
     &__content {
         position: relative;
         padding-top: 24vh;
 
-        @media (min-height: 768px) {
+        @media (min-width: 768px) {
             --fz: 33px;
             --line-w: 209px;
+        }
+        @media (min-width: 2500px) {
+            --fz: 44px;
+            --line-w: 320px;
         }
 
         &::after {
@@ -100,6 +111,10 @@ a {
             line-height: 1.42;
             color: #2a436e;
             max-width: 747px;
+
+            @media (min-width: 2500px) {
+                max-width: 30vw;
+            }
         }
     }
 
@@ -142,24 +157,32 @@ a {
         --fz-description: 31px;
         --fz-h3: 36px;
     }
+    @media (min-width: 2500px) {
+        --fz-description: 38px;
+    }
 
     &--mission {
         position: relative;
-        margin-top: -10vw;
-
-        @media (min-width: 1440px) {
-            margin-top: -24vh;
-        }
+        margin-top: 0;
 
         .container {
             position: relative;
             z-index: 10000;
 
-            padding-top: 50vw;
+            padding-top: 20vw;
             padding-bottom: 10vw;
 
+            @media (min-width: 768px) {
+                padding-top: 44vw;
+                padding-bottom: 10vw;
+            }
+
             @media (min-width: 1440px) {
-                padding-top: 110vh;
+                padding-top: 80vh;
+            }
+
+            @media (min-width: 3200px) {
+                padding-top: 100vh;
             }
         }
     }
@@ -190,6 +213,7 @@ a {
 
     &--engagement {
         padding-block: 100px;
+        position: relative;
 
         @media (min-width: 1366px) {
             padding-block: 208px 225px;
@@ -215,7 +239,7 @@ a {
 
     &__title {
         position: relative;
-        font-size: clamp(28px, 3vw + 1rem, 72px);
+        font-size: clamp(28px, 2.5vw + 1rem, 112px);
         font-weight: 200;
         line-height: 1.15;
         color: #fff;
@@ -340,23 +364,28 @@ a {
     z-index: 100;
     padding-inline: 6vw;
 
+    --padding: 100px;
+
     @media (min-width: 1366px) {
         padding-inline: unset;
         width: 50%;
         height: 100vh;
     }
+    @media (min-width: 2500px) {
+        --padding: 200px;
+    }
 
     &--right {
         @media (min-width: 1366px) {
             margin-left: auto;
-            padding-right: 100px;
+            padding-right: var(--padding);
             padding-left: 116px;
         }
     }
 
     &--left {
         @media (min-width: 1366px) {
-            padding-left: 100px;
+            padding-left: var(--padding);
             padding-right: 116px;
         }
     }
@@ -407,6 +436,9 @@ a {
     @media (min-width: 1637px) {
         padding-left: calc((100vw - 1605px) / 2);
     }
+    @media (min-width: 2500px) {
+        padding-left: 10vw;
+    }
 }
 
 .internationalization-wrapper {
@@ -420,6 +452,10 @@ a {
     max-width: 807px;
     margin-left: auto;
     background-color: rgba(255, 255, 255, 0.9);
+
+    @media (min-width: 2500px) {
+        max-width: 50vw;
+    }
 }
 
 /************************
@@ -459,7 +495,7 @@ a {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 10000000000;
+    z-index: 1000000;
 
     display: flex;
     flex-direction: column;
@@ -469,10 +505,19 @@ a {
     background-color: #2a436e;
     padding: 10px 15px;
 
+    @media (min-width: 2500px) {
+        padding: 20px 25px;
+        gap: 40px;
+    }
+
     a {
         color: #fff;
         font-size: 1.4rem;
         transition: color 150ms ease-in-out;
+
+        @media (min-width: 2500px) {
+            font-size: 2.5rem;
+        }
 
         &:hover,
         &:focus {

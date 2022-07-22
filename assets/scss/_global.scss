@@ -368,8 +368,8 @@ a {
 
     @media (min-width: 1366px) {
         padding-inline: unset;
+        padding-block: 2rem;
         width: 50%;
-        height: 100vh;
     }
     @media (min-width: 2500px) {
         --padding: 200px;

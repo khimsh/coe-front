@@ -89,9 +89,11 @@
     mobileNav()
 
     /************************
-        Image Animation
+        Animation
     *************************/
     let rellax = new Rellax('.rellax', {
         breakpoints: [1200, 2000],
     })
+
+    AOS.init()
 })()

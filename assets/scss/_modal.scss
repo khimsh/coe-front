@@ -1,0 +1,146 @@
+/************************
+        News Modal
+*************************/
+.modal {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    z-index: 100000000;
+
+    &__backdrop {
+        position: absolute;
+        inset: 0;
+        background-color: #2a436e;
+    }
+
+    &__container {
+        position: relative;
+        max-width: 90vw;
+        background-color: #fff;
+        padding-inline: 27px;
+    }
+
+    &__scroll {
+        height: 100%;
+        max-height: 60vh;
+        overflow-y: auto;
+
+        /* width */
+        &::-webkit-scrollbar {
+            width: 2px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            border-radius: 0.9px;
+            background-color: #dcdcdc;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            box-shadow: 0px 6px 14px 0 rgba(5, 7, 32, 0.54);
+            background-color: #2a436e;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    }
+
+    &__body {
+        padding-inline-end: 50px;
+        figure {
+            float: left;
+            padding-right: 35px;
+            width: 618px;
+            height: 422px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .text-flow {
+            --clr: #272727;
+
+            & > p {
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    &__close {
+        position: absolute;
+        right: 25px;
+        top: 25px;
+        background-color: transparent;
+        border: 0;
+        color: #2a436e;
+        font-size: 1rem;
+    }
+
+    &__header {
+        padding: 30px 50px 0 0;
+
+        @media (min-width: 1920px) {
+            margin-bottom: 35px;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: normal;
+            line-height: 1.19;
+            color: #2a436e;
+
+            @media (min-width: 1920px) {
+                font-size: 72px;
+            }
+        }
+
+        time {
+            font-size: 15px;
+            color: #ccc;
+
+            @media (min-width: 1920px) {
+                font-size: 25px;
+            }
+
+            @media (min-width: 2500px) {
+                font-size: 40px;
+            }
+        }
+    }
+
+    &__navigate {
+        padding-block: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+            background-color: transparent;
+            border: 0;
+            display: flex;
+            align-items: center;
+            gap: 27px;
+            cursor: pointer;
+
+            i {
+                font-size: 30px;
+                color: #2a436e;
+            }
+
+            span {
+                font-size: 28px;
+                line-height: 1.5;
+                color: #2a436e;
+            }
+        }
+    }
+}

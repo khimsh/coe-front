@@ -1,0 +1,23 @@
+.swiper-button-next,
+.swiper-button-prev {
+    &::before,
+    &::after {
+        color: #d68049;
+        transition: color 150ms ease-in-out;
+    }
+
+    &:hover,
+    &:focus {
+        &::before,
+        &::after {
+            color: #be5a1b;
+        }
+    }
+}
+
+.team__slider {
+    .swiper-slide {
+        padding-block: 30px;
+        width: 410px !important;
+    }
+}

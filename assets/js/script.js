@@ -13,7 +13,8 @@
 
     const teamSwiper = new Swiper('.team__slider', {
         slidesPerView: 1.2,
-        spaceBetween: 40,
+        spaceBetween: 20,
+        // loop: true,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -31,8 +32,7 @@
             },
             // when window width is >= 2500
             2500: {
-                slidesPerView: 5.2,
-                spaceBetween: 40,
+                slidesPerView: 4.2,
             },
         },
     })
@@ -91,101 +91,7 @@
     /************************
         Image Animation
     *************************/
-    function cb(payload, scaleSize, offsetSize) {
-        let initialOffset = 1
-        let initialScale = 1
-        const elem = payload[0]
-
-        if (elem.isIntersecting) {
-            const starterScrollY = window.scrollY
-            document.addEventListener('scroll', () => {
-                let wo = window.scrollY - starterScrollY
-                let newScale = wo * scaleSize + initialScale < 1 ? 1 : wo * scaleSize + initialScale
-                let newOffset = wo * offsetSize + initialOffset
-                elem.target.style.transform = `translateY(${newOffset}px) scale(${newScale})`
-            })
-        }
-    }
-
-    // Hero Section
-    // const observerHero = new IntersectionObserver(
-    //     (payload) => {
-    //         cb(payload, 0.0006, 0.001)
-    //     },
-    //     {
-    //         threshold: 1,
-    //     }
-    // )
-
-    // observerHero.observe(document.querySelector('.decor-hero__birds'))
     let rellax = new Rellax('.rellax', {
         breakpoints: [1200, 2000],
     })
-
-    // const observerBirds2 = new IntersectionObserver(
-    //     (payload) => {
-    //         cb(payload, 0, -0.1)
-    //     },
-    //     {
-    //         threshold: 1,
-    //     }
-    // )
-
-    // observerBirds2.observe(document.querySelector('.birds'))
-
-    // Mission Section
-    // const handshake = document.querySelector('.mission-decor__handshake')
-
-    // const observerMission = new IntersectionObserver(
-    //     (payload) => {
-    //         cb(payload, 0.0001, 0.05)
-    //     },
-    //     {
-    //         threshold: 1,
-    //     }
-    // )
-
-    // observerMission.observe(handshake)
-
-    // Clouds Section
-    // const cloud1 = document.querySelector('.cloud-1')
-
-    // const observerCloud1 = new IntersectionObserver(
-    //     (payload) => {
-    //         cb(payload, 0.0001, -0.2)
-    //     },
-    //     {
-    //         threshold: 1,
-    //     }
-    // )
-
-    // observerCloud1.observe(cloud1)
-
-    // Clouds Section
-    // const cloud2 = document.querySelector('.cloud-2')
-
-    // const observerCloud2 = new IntersectionObserver(
-    //     (payload) => {
-    //         cb(payload, 0.0004, 0.02)
-    //     },
-    //     {
-    //         threshold: 1,
-    //     }
-    // )
-
-    // observerCloud2.observe(cloud2)
-
-    // // Clouds Section
-    // const windmill = document.querySelector('.windmill')
-
-    // const observerWindmill = new IntersectionObserver(
-    //     (payload) => {
-    //         cb(payload, 0, 0)
-    //     },
-    //     {
-    //         threshold: 1,
-    //     }
-    // )
-
-    // observerWindmill.observe(windmill)
 })()

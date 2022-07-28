@@ -51,6 +51,11 @@ a {
     color: #d68049;
 }
 
+.justify-right {
+    text-align: justify;
+    text-align-last: right;
+}
+
 .sr-only {
     position: absolute;
     left: -10000px;
@@ -69,81 +74,6 @@ a {
     }
     @media (min-width: 2500px) {
         width: 80vw;
-    }
-}
-
-/************************
-        Hero
-*************************/
-.hero {
-    position: relative;
-    // min-height: 100dvh;
-    height: 100vh;
-    z-index: 1000;
-
-    &__content {
-        position: relative;
-        padding-top: 24vh;
-
-        @media (min-width: 768px) {
-            --fz: 33px;
-            --line-w: 209px;
-        }
-        @media (min-width: 2500px) {
-            --fz: 44px;
-            --line-w: 320px;
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-
-            width: var(--line-w, 100px);
-            height: 3px;
-            background-color: #d68049;
-        }
-
-        p {
-            font-size: var(--fz, 20px);
-            font-weight: 400;
-            line-height: 1.42;
-            color: #2a436e;
-            max-width: 747px;
-
-            @media (min-width: 2500px) {
-                max-width: 30vw;
-            }
-        }
-    }
-
-    &__slider {
-        width: 100%;
-        // height: 100dvh;
-        height: 100vh;
-    }
-
-    &__pagination {
-        position: absolute;
-        bottom: 28px !important;
-        display: flex;
-        justify-content: center;
-        z-index: 100000;
-
-        .swiper-pagination-bullet {
-            width: 61px;
-            height: 3px;
-            background-color: #fff !important;
-            border-radius: 0 !important;
-            transition: all 150ms ease-in-out;
-            opacity: 1 !important;
-            cursor: pointer;
-        }
-
-        .swiper-pagination-bullet-active {
-            background-color: #d68049 !important;
-        }
     }
 }
 
@@ -201,6 +131,7 @@ a {
         padding-block: 212px;
         background-size: cover;
         background-repeat: no-repeat;
+        background-attachment: fixed;
     }
 
     &--partners {
@@ -363,8 +294,9 @@ a {
     position: relative;
     z-index: 100;
     padding-inline: 6vw;
+    z-index: 1000;
 
-    --padding: 100px;
+    --padding: 70px;
 
     @media (min-width: 1100px) {
         padding-inline: unset;
@@ -379,6 +311,9 @@ a {
         @media (min-width: 1100px) {
             margin-left: auto;
             padding-right: var(--padding);
+            padding-left: 50px;
+        }
+        @media (min-width: 1920px) {
             padding-left: 116px;
         }
     }
@@ -386,6 +321,9 @@ a {
     &--left {
         @media (min-width: 1100px) {
             padding-left: var(--padding);
+            padding-right: 50px;
+        }
+        @media (min-width: 1920px) {
             padding-right: 116px;
         }
     }
@@ -406,7 +344,6 @@ a {
 
     p {
         font-size: var(--text);
-        text-align: justify;
         color: #fefefe;
     }
 }
@@ -428,6 +365,7 @@ a {
     z-index: 1000;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 100px 70px 100px 1rem;
+    padding-left: 6vw;
 
     @media (min-width: 1366px) {
         max-width: 50vw;
@@ -436,16 +374,28 @@ a {
     @media (min-width: 1637px) {
         padding-left: calc((100vw - 1605px) / 2);
     }
+
     @media (min-width: 2500px) {
         padding-left: 10vw;
     }
 }
 
 .internationalization-wrapper {
-    padding-top: 121px;
-    padding-bottom: 136px;
+    padding-block: 100px;
     display: flex;
     justify-content: space-between;
+    gap: 40px;
+
+    @media (min-width: 1240px) {
+        padding-block: 100px;
+    }
+    @media (min-width: 1366px) {
+        padding-block: 100px;
+    }
+    @media (min-width: 1440px) {
+        gap: 130px;
+        padding-block: 121px 136px;
+    }
 }
 
 .internationalization {
@@ -456,37 +406,11 @@ a {
     @media (min-width: 2500px) {
         max-width: 50vw;
     }
-}
 
-/************************
-        Team
-*************************/
-.team-member {
-    position: relative;
-
-    figcaption {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        padding: 14px 27px 16px 20px;
-        font-size: 29.5px;
-        font-weight: 300;
-        line-height: 1;
-        color: #fff;
-        background-color: #d68049;
-    }
-}
-
-.site-footer {
-    position: absolute;
-    bottom: 14px;
-    left: 0;
-    right: 0;
-
-    p {
-        font-size: 14px;
-        font-weight: 300;
-        color: #fff;
+    .text-flow {
+        p {
+            color: #2a436e;
+        }
     }
 }
 
@@ -531,7 +455,6 @@ a {
 }
 
 .team-title {
-    margin-bottom: 27px;
     font-size: clamp(24px, 2.5vw + 1rem, 42px);
     font-weight: 200;
     text-align: center;

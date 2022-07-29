@@ -689,7 +689,7 @@ a {
   position: absolute;
   inset: 0;
   background-repeat: no-repeat;
-  background-image: url(../img/hero-bg.jpg);
+  background-image: url(../images/hero-bg.jpg);
   background-size: cover;
   background-attachment: fixed;
 }

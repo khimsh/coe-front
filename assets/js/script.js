@@ -91,9 +91,7 @@
     /************************
         Animation
     *************************/
-    let rellax = new Rellax('.rellax', {
-        breakpoints: [1200, 2000],
-    })
+    let rellax = new Rellax('.rellax')
 
     AOS.init()
 
@@ -121,8 +119,13 @@
         })
 
         document.addEventListener('keyup', (e) => {
-            if (e.key === 'Escape') {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
                 modal.classList.remove('active')
+            }
+
+            if (e.key === 'Escape' && document.querySelector('.site-nav').classList.contains('active')) {
+                document.querySelector('.site-nav').classList.remove('active')
+                document.querySelector('.site-header__btn').innerHTML = '<i class="fa-solid fa-bars"></i>'
             }
         })
     }

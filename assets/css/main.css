@@ -1109,6 +1109,7 @@ a {
 }
 
 .team__slider .swiper-slide {
+  flex-shrink: 0;
   padding-block: 30px;
   width: 410px !important;
 }

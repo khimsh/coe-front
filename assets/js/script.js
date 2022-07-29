@@ -96,4 +96,36 @@
     })
 
     AOS.init()
+
+    /************************
+        Modal
+    *************************/
+    function newsModal() {
+        if (!document.querySelector('.modal')) return
+
+        const modal = document.querySelector('.modal')
+        const backdrop = modal.querySelector('.modal__backdrop')
+        const closeModalBtn = modal.querySelector('.modal__close')
+        const openModalBtn = document.querySelector('.modal-open')
+
+        openModalBtn.addEventListener('click', () => {
+            modal.classList.add('active')
+        })
+
+        closeModalBtn.addEventListener('click', () => {
+            modal.classList.remove('active')
+        })
+
+        backdrop.addEventListener('click', () => {
+            modal.classList.remove('active')
+        })
+
+        document.addEventListener('keyup', (e) => {
+            if (e.key === 'Escape') {
+                modal.classList.remove('active')
+            }
+        })
+    }
+
+    newsModal()
 })()

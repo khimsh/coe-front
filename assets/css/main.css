@@ -1151,11 +1151,15 @@ a {
   display: grid;
   place-content: center;
   z-index: 100000000;
+  display: none;
+}
+.modal.active {
+  display: grid;
 }
 .modal__backdrop {
   position: absolute;
   inset: 0;
-  background-color: #2a436e;
+  background-color: hsla(218deg, 45%, 30%, 0.3);
 }
 .modal__container {
   position: relative;
@@ -1187,13 +1191,35 @@ a {
   background: #555;
 }
 .modal__body {
-  padding-inline-end: 50px;
+  padding-inline-end: 10px;
+}
+@media (min-width: 1200px) {
+  .modal__body {
+    padding-inline-end: 20px;
+  }
+}
+@media (min-width: 1920px) {
+  .modal__body {
+    padding-inline-end: 50px;
+  }
 }
 .modal__body figure {
-  float: left;
-  padding-right: 35px;
-  width: 618px;
-  height: 422px;
+  margin-bottom: 10px;
+}
+@media (min-width: 760px) {
+  .modal__body figure {
+    float: left;
+    padding-right: 15px;
+    width: 420px;
+    height: 280px;
+  }
+}
+@media (min-width: 1365px) {
+  .modal__body figure {
+    padding-right: 35px;
+    width: 618px;
+    height: 422px;
+  }
 }
 .modal__body figure img {
   width: 100%;
@@ -1202,6 +1228,19 @@ a {
 }
 .modal__body .text-flow {
   --clr: #272727;
+}
+.modal__body .text-flow > p {
+  font-size: 16px;
+}
+@media (min-width: 1920px) {
+  .modal__body .text-flow > p {
+    font-size: 20px;
+  }
+}
+@media (min-width: 2500px) {
+  .modal__body .text-flow > p {
+    font-size: 30px;
+  }
 }
 .modal__body .text-flow > p:not(:last-child) {
   margin-bottom: 20px;
@@ -1214,33 +1253,56 @@ a {
   border: 0;
   color: #2a436e;
   font-size: 1rem;
+  cursor: pointer;
 }
 .modal__header {
   padding: 30px 50px 0 0;
 }
 @media (min-width: 1920px) {
   .modal__header {
-    margin-bottom: 35px;
+    margin-bottom: 10px;
   }
 }
 .modal__header h3 {
-  font-size: 24px;
+  position: relative;
+  font-size: 22px;
   font-weight: normal;
   line-height: 1.19;
   color: #2a436e;
 }
+@media (min-width: 1200px) {
+  .modal__header h3 {
+    font-size: 28px;
+  }
+}
 @media (min-width: 1920px) {
+  .modal__header h3 {
+    font-size: 44px;
+  }
+}
+@media (min-width: 2500px) {
   .modal__header h3 {
     font-size: 72px;
   }
 }
+.modal__header h3::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 209px;
+  height: 3px;
+  background-color: #d68049;
+}
 .modal__header time {
+  display: block;
+  margin-top: 10px;
   font-size: 15px;
   color: #ccc;
 }
 @media (min-width: 1920px) {
   .modal__header time {
-    font-size: 25px;
+    font-size: 23px;
   }
 }
 @media (min-width: 2500px) {
@@ -1249,10 +1311,15 @@ a {
   }
 }
 .modal__navigate {
-  padding-block: 30px;
+  padding-block: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (min-width: 1200px) {
+  .modal__navigate {
+    padding-block: 30px;
+  }
 }
 .modal__navigate button {
   background-color: transparent;
@@ -1263,13 +1330,23 @@ a {
   cursor: pointer;
 }
 .modal__navigate button i {
-  font-size: 30px;
+  font-size: 1rem;
   color: #2a436e;
 }
+@media (min-width: 1920px) {
+  .modal__navigate button i {
+    font-size: 30px;
+  }
+}
 .modal__navigate button span {
-  font-size: 28px;
+  font-size: 1rem;
   line-height: 1.5;
   color: #2a436e;
+}
+@media (min-width: 1920px) {
+  .modal__navigate button span {
+    font-size: 28px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

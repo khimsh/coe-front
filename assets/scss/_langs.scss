@@ -1,0 +1,19 @@
+.langs {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+
+    &__link {
+        font-size: 19.5px;
+        color: rgb(116, 116, 116);
+        line-height: 1.95;
+        text-decoration: none;
+
+        &.active {
+            font-weight: 500;
+            color: #333;
+        }
+    }
+}

@@ -138,24 +138,26 @@
     function teamMemberPopup() {
         if (!document.querySelector('.bio-popup')) return
 
-        const teamMembers = document.querySelectorAll('.team-member')
-        const popup = document.querySelector('.bio-popup')
-        const popupBg = popup.querySelector('.bio-popup__backdrop')
-        const popupBtn = popup.querySelector('.bio-popup__close')
+        const teamMembers = document.querySelectorAll('[data-team]')
+        const popups = [...document.querySelectorAll('.bio-popup')]
 
         // open popup
         teamMembers.forEach((teamMember) => {
             teamMember.addEventListener('click', () => {
-                popup.classList.add('active')
-            })
-        })
+                const popup = popups.find((popup) => popup.id === teamMember.dataset.team)
+                const popupBg = popup.querySelector('.bio-popup__backdrop')
+                const popupBtn = popup.querySelector('.bio-popup__close')
 
-        // close popup
-        popupBg.addEventListener('click', () => {
-            popup.classList.remove('active')
-        })
-        popupBtn.addEventListener('click', () => {
-            popup.classList.remove('active')
+                popup.classList.add('active')
+
+                // close popup
+                popupBg.addEventListener('click', () => {
+                    popup.classList.remove('active')
+                })
+                popupBtn.addEventListener('click', () => {
+                    popup.classList.remove('active')
+                })
+            })
         })
     }
 

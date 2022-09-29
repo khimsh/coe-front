@@ -18,12 +18,9 @@
     @media (min-width: 1440px) {
         --text: 24px;
     }
-    @media (min-width: 1920px) {
-        --text: 28px;
-    }
-    @media (min-width: 2500px) {
-        --text: 38px;
-    }
+    // @media (min-width: 1920px) {
+    //     --text: 26px;
+    // }
 }
 
 html {
@@ -92,11 +89,8 @@ a {
     background-color: var(--bg-color);
 
     @media (min-width: 1366px) {
-        --fz-description: 31px;
+        --fz-description: 28px;
         --fz-h3: 36px;
-    }
-    @media (min-width: 2500px) {
-        --fz-description: 38px;
     }
 
     &--mission {
@@ -178,7 +172,7 @@ a {
 
     &__title {
         position: relative;
-        font-size: clamp(28px, 2.5vw + 1rem, 112px);
+        font-size: clamp(28px, 2.5vw + 1rem, 72px);
         font-weight: 200;
         line-height: 1.15;
         color: #fff;

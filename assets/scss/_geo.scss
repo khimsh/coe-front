@@ -1,0 +1,23 @@
+.geo {
+    .hero {
+        &__content {
+            --fz: 30px;
+        }
+
+        p {
+            max-width: 800px;
+        }
+    }
+
+    .section {
+        background-color: var(--bg-color);
+
+        @media (min-width: 1366px) {
+            --fz-h3: 28px;
+        }
+    }
+
+    .justify-right {
+        text-align-last: left;
+    }
+}

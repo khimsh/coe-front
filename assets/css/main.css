@@ -31,16 +31,6 @@
     --text: 24px;
   }
 }
-@media (min-width: 1920px) {
-  :root {
-    --text: 28px;
-  }
-}
-@media (min-width: 2500px) {
-  :root {
-    --text: 38px;
-  }
-}
 
 html {
   scroll-behavior: smooth;
@@ -111,13 +101,8 @@ a {
 }
 @media (min-width: 1366px) {
   .section {
-    --fz-description: 31px;
+    --fz-description: 28px;
     --fz-h3: 36px;
-  }
-}
-@media (min-width: 2500px) {
-  .section {
-    --fz-description: 38px;
   }
 }
 .section--mission {
@@ -195,7 +180,7 @@ a {
 }
 .section__title {
   position: relative;
-  font-size: clamp(28px, 2.5vw + 1rem, 112px);
+  font-size: clamp(28px, 2.5vw + 1rem, 72px);
   font-weight: 200;
   line-height: 1.15;
   color: #fff;
@@ -530,6 +515,24 @@ a {
   }
 }
 
+.geo .hero__content {
+  --fz: 30px;
+}
+.geo .hero p {
+  max-width: 800px;
+}
+.geo .section {
+  background-color: var(--bg-color);
+}
+@media (min-width: 1366px) {
+  .geo .section {
+    --fz-h3: 28px;
+  }
+}
+.geo .justify-right {
+  text-align-last: left;
+}
+
 /************************
         Header
 *************************/
@@ -582,12 +585,6 @@ a {
   .hero__content {
     --fz: 33px;
     --line-w: 209px;
-  }
-}
-@media (min-width: 2500px) {
-  .hero__content {
-    --fz: 44px;
-    --line-w: 320px;
   }
 }
 .hero__content::after {

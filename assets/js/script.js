@@ -37,6 +37,15 @@
         },
     })
 
+    const newsSwiper = new Swiper('.news-swiper', {
+        slidesPerView: 1,
+        // loop: true,
+        navigation: {
+            nextEl: '.modal__next',
+            prevEl: '.modal__prev',
+        },
+    })
+
     /************************
         Navigation
     *************************/

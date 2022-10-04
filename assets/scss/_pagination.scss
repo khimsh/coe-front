@@ -1,0 +1,34 @@
+.pagination {
+    margin-top: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    --fz: 30px;
+
+    @media (max-width: 1180px) {
+        --fz: 20px;
+    }
+
+    @media (max-width: 768px) {
+        --fz: 16px;
+    }
+
+    small {
+        font-size: var(--fz);
+        color: #cccccc;
+    }
+
+    a {
+        font-size: var(--fz);
+        color: #cccccc;
+        text-decoration: none;
+
+        i,
+        &:hover,
+        &.active {
+            color: #2a436e;
+        }
+    }
+}

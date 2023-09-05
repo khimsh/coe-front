@@ -1513,6 +1513,7 @@ a {
   color: #2a436e;
   font-size: 1rem;
   cursor: pointer;
+  z-index: 10;
 }
 .modal__header {
   padding: 30px 50px 0 0;
